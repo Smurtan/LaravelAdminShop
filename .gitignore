@@ -27,7 +27,6 @@ Homestead.json
 .env.backup
 .env.production
 .phpactor.json
-/auth.json
 
 # Other
 /.phpunit.cache
