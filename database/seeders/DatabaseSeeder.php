@@ -14,8 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
+
         $this->call([
             RolesTableSeeder::class,
+            UserRoleSeeder::class,
             CurrenciesTableSeeder::class,
             OrdersTableSeeder::class,
             AttributeGroupsTableSeeder::class,
@@ -28,10 +34,5 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
     }
 }
