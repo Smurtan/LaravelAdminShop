@@ -19,7 +19,7 @@ class CheckStatusAdmin
         if (Auth::user() && Auth::user()->isAdmin()) {
             return $next($request);
         } else {
-            return redirect('/')->withErrors(['permission' => 'У вас нет прав доступа к этой странице.']);
+            return redirect('/')->withErrors(['permission' => __("You don't have access rights to this page")]);
         }
     }
 }

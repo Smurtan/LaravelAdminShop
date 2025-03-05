@@ -16,6 +16,20 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @if(Auth::user()->isUser())
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="url('/user/index')" :active="request()->route()->uri() == 'user/index'">
+                            {{ __('Office') }}
+                        </x-nav-link>
+                    </div>
+                @endif
+                @if(Auth::user()->isAdmin())
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="url('/admin/index')" :active="request()->route()->uri() == 'admin/index'">
+                            {{ __('Admin panel') }}
+                        </x-nav-link>
+                    </div>
+                @endif
             </div>
 
             <!-- Settings Dropdown -->

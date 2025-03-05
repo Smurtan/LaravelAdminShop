@@ -1,19 +1,19 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">{{ __("Main page") }}</div>
 
-@section('content')
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Главная страница</div>
+                        <div class="card-body">
 
-                    <div class="card-body">
+                            {{ __("THE USER IS BLOCKED") }}
 
-                        ПОЛЬЗОВАТЕЛЬ ЗАБЛОКИРОВАН
-
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+    </x-slot>
+</x-app-layout>

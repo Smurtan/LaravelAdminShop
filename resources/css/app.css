@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 #background {
-    background-image: url("/resources/images/main.jpg");
-    opacity: 0.3;
+    background-image: url("/resources/images/welcome-fon.jpg");
+    opacity: 0.5;
     -moz-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
     -o-background-size: 100% 100%;

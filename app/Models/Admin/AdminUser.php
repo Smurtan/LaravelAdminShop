@@ -3,18 +3,17 @@
 namespace App\Models\Admin;
 
 use App\Models\Role;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Model
+class AdminUser extends User
 {
     use SoftDeletes, Notifiable;
 
     protected $fillable = [
         'name',
-        'login',
         'email',
         'password',
     ];

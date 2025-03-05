@@ -18,12 +18,14 @@ class UserRoleSeeder extends Seeder
             User::factory()->count(10)->create();
         }
 
+        $count_users = User::query()->count();
+
         if (Role::query()->count() === 0) {
             Role::factory()->count(3)->create();
         }
 
         UserRole::factory()
-            ->count(10)
+            ->count($count_users)
             ->create(function () {
                 $user = User::query()->inRandomOrder()->first();
                 $role = Role::query()->inRandomOrder()->first();

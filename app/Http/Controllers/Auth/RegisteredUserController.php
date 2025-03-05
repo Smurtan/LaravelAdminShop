@@ -43,6 +43,7 @@ class RegisteredUserController extends Controller
 
         \DB::table('user_roles')->insert([
             'user_id' => $user->id,
+            'role_id' => \DB::table('roles')->where('name', 'user')->first()->id,
         ]);
 
         event(new Registered($user));
