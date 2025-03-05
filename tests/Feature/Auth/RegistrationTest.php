@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Role;
+
 test('registration screen can be rendered', function () {
     $response = $this->get('/register');
 
@@ -7,6 +9,8 @@ test('registration screen can be rendered', function () {
 });
 
 test('new users can register', function () {
+    Role::factory()->create(['name' => 'user']);
+
     $response = $this->post('/register', [
         'name' => 'Test User',
         'email' => 'test@example.com',
