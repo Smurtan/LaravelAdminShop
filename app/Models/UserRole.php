@@ -15,4 +15,6 @@ class UserRole extends Model
         'user_id',
         'role_id',
     ];
+
+    public $timestamps = false;
 }
