@@ -29,8 +29,9 @@
 
             <!-- Page Content -->
             <main>
-                @isset($body)
-                {{ $body }}
+                {{ $slot }}
+                @isset($content)
+                    {{ $content }}
                 @endisset
             </main>
         </div>
