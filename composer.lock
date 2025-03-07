@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a739267a391adcba09c97097cbad9f52",
+    "content-hash": "71b19e2b763160d4002dcdb68567e26f",
     "packages": [
+        {
+            "name": "almasaeed2010/adminlte",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ColorlibHQ/AdminLTE.git",
+                "reference": "bd4d9c72931f1dd28601b6bfb387554a381ad540"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/bd4d9c72931f1dd28601b6bfb387554a381ad540",
+                "reference": "bd4d9c72931f1dd28601b6bfb387554a381ad540",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Colorlib"
+                }
+            ],
+            "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 4",
+            "homepage": "https://adminlte.io/",
+            "keywords": [
+                "JS",
+                "admin",
+                "back-end",
+                "css",
+                "less",
+                "responsive",
+                "template",
+                "theme",
+                "web"
+            ],
+            "support": {
+                "issues": "https://github.com/ColorlibHQ/AdminLTE/issues",
+                "source": "https://github.com/ColorlibHQ/AdminLTE/tree/v3.2.0"
+            },
+            "time": "2022-02-07T20:33:09+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.1",
@@ -65,6 +108,85 @@
                 }
             ],
             "time": "2023-11-29T23:19:16+00:00"
+        },
+        {
+            "name": "butschster/meta-tags",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/butschster/LaravelMetaTags.git",
+                "reference": "0246a6745a2b6ab0145c02760af89fb87be25b55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/butschster/LaravelMetaTags/zipball/0246a6745a2b6ab0145c02760af89fb87be25b55",
+                "reference": "0246a6745a2b6ab0145c02760af89fb87be25b55",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/config": "^9.0|^10.0|^11.0|^12.0",
+                "illuminate/console": "^9.0|^10.0|^11.0|^12.0",
+                "illuminate/contracts": "^9.0|^10.0|^11.0|^12.0",
+                "illuminate/support": "^9.0|^10.0|^11.0|^12.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^9.3|^10.5",
+                "vimeo/psalm": "^5.15|^6.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Meta": "Butschster\\Head\\Facades\\Meta",
+                        "PackageManager": "Butschster\\Head\\Facades\\PackageManager"
+                    },
+                    "providers": [
+                        "Butschster\\Head\\Providers\\MetaTagsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Butschster\\Head\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pavel Buchnev",
+                    "email": "butschster@gmail.com"
+                }
+            ],
+            "description": "The most powerful and extendable tools for managing SEO Meta Tags in your Laravel project",
+            "keywords": [
+                "laravel5",
+                "lumen",
+                "metatags",
+                "opengraph",
+                "seo",
+                "webmaster"
+            ],
+            "support": {
+                "issues": "https://github.com/butschster/LaravelMetaTags/issues",
+                "source": "https://github.com/butschster/LaravelMetaTags/tree/v3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/laravelmetatags",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://www.patreon.com/butschster",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2025-02-17T06:09:40+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1053,6 +1175,65 @@
                 }
             ],
             "time": "2025-02-03T10:55:03+00:00"
+        },
+        {
+            "name": "jeroennoten/laravel-adminlte",
+            "version": "v3.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
+                "reference": "0269331f55fa8385413895225d6d89b85babe3de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/0269331f55fa8385413895225d6d89b85babe3de",
+                "reference": "0269331f55fa8385413895225d6d89b85babe3de",
+                "shasum": ""
+            },
+            "require": {
+                "almasaeed2010/adminlte": "3.2.*",
+                "laravel/framework": ">=8.0",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": ">=6.0",
+                "phpunit/phpunit": ">=9.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JeroenNoten\\LaravelAdminLte\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen Noten",
+                    "email": "jeroennoten@me.com"
+                }
+            ],
+            "description": "Easy AdminLTE integration with Laravel",
+            "keywords": [
+                "AdminLTE",
+                "admin",
+                "administrator",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/jeroennoten/Laravel-AdminLTE/issues",
+                "source": "https://github.com/jeroennoten/Laravel-AdminLTE/tree/v3.15.0"
+            },
+            "time": "2025-02-24T22:20:15+00:00"
         },
         {
             "name": "laravel/framework",

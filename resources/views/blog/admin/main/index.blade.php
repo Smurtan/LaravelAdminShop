@@ -1,25 +1,38 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200leading-tight">
-            {{ __('Admin panel') }}
-        </h2>
-    </x-slot>
+@extends('adminlte::page')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
-            <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
-                <div class="max-w-xl">
+@section('title', 'Admin dashboard')
 
-                    <section class="space-y-6">
-                        <header>
-                            <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-                                {{ __('Admin') }}
-                            </h2>
-                        </header>
-                    </section>
+@section('content_header')
+    @component('blog.admin.components.breadcrumb')
+        @slot('title')
+            Панель управления
+        @endslot
+        @slot('parent')
+            Главная
+        @endslot
+        @slot('active')
+        @endslot
+    @endcomponent
+@stop
 
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+@section('content')
+    <p>Welcome to this beautiful admin panel.</p>
+@stop
+
+@section('meta_tags')
+    {!! Meta::toHtml() !!}
+@stop
+
+@section('css')
+    <?php
+        echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>';
+    ?>
+
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop
+
